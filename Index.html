@@ -280,16 +280,53 @@
         <section class="column" tabindex="0">
           <h2>Act Now</h2>
           <p>Together, we can create <strong>lasting change</strong> and ensure that every community has access to safe drinking water.</p>
-        </section>
-      </div>
-      <div class="image-section">
-        <img 
-          <img src="https://cdn2.dropmarkusercontent.com/52043/40ba41fc45e5e377672c3ed45d1f0b554df90beb280d7c7278bb8013ce08bee4/preview/4800_Ethiopia_2019_CG-.jpg?Expires=1749834249&Signature=TGxOZqnTveupVevlCQX5V-Ojpi-IqTpMsOsCW1JhZPRfA2XnxibybowSe4acCGWr7uebPakdqpUHGrdjs156WM7fYKY8SBiOOnO9kgxavV6aBcMmpZ5Bq11Fqxib4hEyRpyWoDVdcGy329kYG9pARPEzenIMmea2jYxwpiOLmAPU8wgh-8gbqQ6RZNytwQgACKQOaE9m0x7K0YnAi2wzqscKyPSLjOQj9-QoVuqlST5skpC9uTA9T4LXFEAb3ecZPLrCD9vw1YqJuZ2ZUQ0-79aBr8nQQNsrYm2aicpGWF6pZsq7PGKQ~QVm8zou8Y0m1SLmdtsFO4YV6p7ZJckFqQ__&Key-Pair-Id=APKAITQYWVEN757ZA4KQ" alt="Charity Water Ethiopia 2019">
-          alt="Girl with clean water"
-          tabindex="0"
-        />
-      </div>
-      <div class="cta">
-        <a class="donate-btn" href="https://www.charitywater.org/donate" target="_blank" rel="noopener">Donate Now</a>
-      </div>
     </div>
+    <div id="donate-section" style="margin: 60px auto 0 auto; padding: 40px 20px; background: linear-gradient(135deg, #00b4d8 0%, #90e0ef 100%); border-radius: 18px; max-width: 420px; box-shadow: 0 6px 32px rgba(0,0,0,0.10); text-align: center;">
+  <h2 style="color: #023047; margin-bottom: 18px; font-size: 2rem;">Make a Difference</h2>
+  <p style="color: #023047; margin-bottom: 28px; font-size: 1.1rem;">Choose an amount or enter your own:</p>
+  <form id="donation-form" style="display: flex; flex-direction: column; align-items: center; gap: 18px;">
+    <div style="display: flex; gap: 12px;">
+      <button type="button" class="donate-btn" onclick="setAmount(20)">$20</button>
+      <button type="button" class="donate-btn" onclick="setAmount(40)">$40</button>
+      <button type="button" class="donate-btn" onclick="setAmount(50)">$50</button>
+      <button type="button" class="donate-btn" onclick="setAmount(100)">$100</button>
+    </div>
+    <input type="number" id="custom-amount" placeholder="Custom amount" min="1" style="padding: 10px 14px; border-radius: 6px; border: 1px solid #90e0ef; font-size: 1rem; width: 160px;">
+    <button type="submit" style="background: #023047; color: #fff; border: none; border-radius: 6px; padding: 12px 36px; font-size: 1.1rem; font-weight: bold; cursor: pointer; transition: background 0.2s;">Donate</button>
+  </form>
+</div>
+
+<style>
+  .donate-btn {
+    background: #fff;
+    color: #00b4d8;
+    border: 2px solid #00b4d8;
+    border-radius: 6px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+  }
+  .donate-btn:hover, .donate-btn:focus {
+    background: #00b4d8;
+    color: #fff;
+    outline: none;
+    }
+</style>
+
+<script>
+  function setAmount(amount) {
+    document.getElementById('custom-amount').value = amount;
+  }
+
+  document.getElementById('donation-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const amount = document.getElementById('custom-amount').value;
+    if (amount && amount > 0) {
+      alert('Thank you for donating $' + amount + '!');
+    } else {
+      alert('Please enter a valid donation amount.');
+    }
+  });
+</script>
