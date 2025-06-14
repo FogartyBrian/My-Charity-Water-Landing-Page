@@ -1,0 +1,60 @@
+/* Add your CSS styles below */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f8fb;
+  color: #222;
+}
+
+header {
+  background: #0077b6;
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;/
+}
+
+.content {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.columns {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.column {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  flex: 1;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.image-section {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.cta {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.cta a {
+  background: #00b4d8;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.cta a:hover {
+  background: #0077b6;
+}
