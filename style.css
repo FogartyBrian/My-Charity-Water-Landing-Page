@@ -4,15 +4,28 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #f4f8fb;
+  background: var(--primary);
   color: #222;
 }
-
+:root {
+  --pantone-108u: #FFC907;
+  --pantone-blue: #003366;
+  --pantone-blue-tint: #77A8BB;
+  --pantone-cream: #FFF7E1;
+  --pantone-black6u: #1A1A1A;
+  --pantone-cream-tint: #FDF6EC;
+  --pantone-peach: #FED8C1;
+  --pantone-brown: #BF6C46;
+  --pantone-grey: #CBCCD1;
+  --primary: var(--pantone-cream);
+  --secondary: var(--pantone-blue);
+  --accent: var(--pantone-108u);
+}
 header {
   background: #0077b6;
   color: #fff;
   padding: 2rem 1rem;
-  text-align: center;/
+  text-align: center;
 }
 
 .content {
@@ -57,4 +70,21 @@ header {
 
 .cta a:hover {
   background: #0077b6;
+}
+@media (max-width: 768px) {
+  .container {
+    padding: 8px;
+  }
+  h1 {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 4px;
+  }
+  h1 {
+    font-size: 1.2em;
+  }
 }
